@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />       
+    <link rel="stylesheet" href="style.css" />    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema CRUD</title>     
+</head>
+<body>
+    <div id="nav">
+        <h1>Sistema CRUD</h1>
+    </div>
+    <section id="table">
+        <form method="POST">
+            <div id="input-data">
+                <input id="name" class="input-text" placeholder="Nome" type="text" required />                  
+                <input id="email" class="input-text" placeholder="Email" type="email" required />
+                <input id="phone" class="input-text" placeholder="Telefone" type="number" required />
+
+                <select name="category" id="category" class="input-text input-select">
+                    <option selected>Categoria</option>
+                    <option value="Aluno">Aluno</option>
+                    <option value="Responsável">Responsável</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Funcionário">Funcionário</option>
+                    <option value="Coordenador">Coordenador</option>
+                </select>
+
+                <select name="states" id="states" class="input-text input-select">
+                    <option selected>Estados</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BH">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+
+                <input class="input-btn" type="submit" value="Enviar" onclick="return addToTable()" />
+            </div>
+        </form>
+        <section class="box-Table">
+            <table id="Table">
+                <tr>
+                    <th class="index-style">ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Categoria</th>
+                    <th>Estado</th>
+                    <th>Ação</th>
+                </tr>
+            </table>
+        </section>
+    </section>   
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
+
